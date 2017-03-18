@@ -1,0 +1,10 @@
+.login {
+    width: 100%;
+    background-color: darken($default-background-color, 5%);
+    margin: 20% auto;
+
+    @include if-is-large-screen {
+        width: 60%;
+    }
+
+}

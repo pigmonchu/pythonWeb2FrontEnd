@@ -1,0 +1,15 @@
+.web-footer {
+    width: 100%;
+    background-color: $attention-color;
+    color: $default-background-color;
+
+    p {
+        margin: 0.3em auto;
+        line-height: 1em;
+    }
+
+    a {
+        color: $default-background-color;
+    }
+    
+}

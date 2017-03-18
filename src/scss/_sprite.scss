@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$comments-btn-name: 'comments-btn';
+$comments-btn-x: 50px;
+$comments-btn-y: 0px;
+$comments-btn-offset-x: -50px;
+$comments-btn-offset-y: 0px;
+$comments-btn-width: 20px;
+$comments-btn-height: 20px;
+$comments-btn-total-width: 70px;
+$comments-btn-total-height: 70px;
+$comments-btn-image: '../images/sprite.png';
+$comments-btn: (50px, 0px, -50px, 0px, 20px, 20px, 70px, 70px, '../images/sprite.png', 'comments-btn', );
+$comments-on-btn-name: 'commentsOn-btn';
+$comments-on-btn-x: 50px;
+$comments-on-btn-y: 20px;
+$comments-on-btn-offset-x: -50px;
+$comments-on-btn-offset-y: -20px;
+$comments-on-btn-width: 20px;
+$comments-on-btn-height: 20px;
+$comments-on-btn-total-width: 70px;
+$comments-on-btn-total-height: 70px;
+$comments-on-btn-image: '../images/sprite.png';
+$comments-on-btn: (50px, 20px, -50px, -20px, 20px, 20px, 70px, 70px, '../images/sprite.png', 'commentsOn-btn', );
+$divide-btn-name: 'divide-btn';
+$divide-btn-x: 0px;
+$divide-btn-y: 0px;
+$divide-btn-offset-x: 0px;
+$divide-btn-offset-y: 0px;
+$divide-btn-width: 25px;
+$divide-btn-height: 25px;
+$divide-btn-total-width: 70px;
+$divide-btn-total-height: 70px;
+$divide-btn-image: '../images/sprite.png';
+$divide-btn: (0px, 0px, 0px, 0px, 25px, 25px, 70px, 70px, '../images/sprite.png', 'divide-btn', );
+$favorite-btn-name: 'favorite-btn';
+$favorite-btn-x: 0px;
+$favorite-btn-y: 50px;
+$favorite-btn-offset-x: 0px;
+$favorite-btn-offset-y: -50px;
+$favorite-btn-width: 20px;
+$favorite-btn-height: 20px;
+$favorite-btn-total-width: 70px;
+$favorite-btn-total-height: 70px;
+$favorite-btn-image: '../images/sprite.png';
+$favorite-btn: (0px, 50px, 0px, -50px, 20px, 20px, 70px, 70px, '../images/sprite.png', 'favorite-btn', );
+$favorite-on-btn-name: 'favoriteOn-btn';
+$favorite-on-btn-x: 20px;
+$favorite-on-btn-y: 50px;
+$favorite-on-btn-offset-x: -20px;
+$favorite-on-btn-offset-y: -50px;
+$favorite-on-btn-width: 20px;
+$favorite-on-btn-height: 20px;
+$favorite-on-btn-total-width: 70px;
+$favorite-on-btn-total-height: 70px;
+$favorite-on-btn-image: '../images/sprite.png';
+$favorite-on-btn: (20px, 50px, -20px, -50px, 20px, 20px, 70px, 70px, '../images/sprite.png', 'favoriteOn-btn', );
+$login-btn-name: 'login-btn';
+$login-btn-x: 25px;
+$login-btn-y: 0px;
+$login-btn-offset-x: -25px;
+$login-btn-offset-y: 0px;
+$login-btn-width: 25px;
+$login-btn-height: 25px;
+$login-btn-total-width: 70px;
+$login-btn-total-height: 70px;
+$login-btn-image: '../images/sprite.png';
+$login-btn: (25px, 0px, -25px, 0px, 25px, 25px, 70px, 70px, '../images/sprite.png', 'login-btn', );
+$search-btn-name: 'search-btn';
+$search-btn-x: 0px;
+$search-btn-y: 25px;
+$search-btn-offset-x: 0px;
+$search-btn-offset-y: -25px;
+$search-btn-width: 25px;
+$search-btn-height: 25px;
+$search-btn-total-width: 70px;
+$search-btn-total-height: 70px;
+$search-btn-image: '../images/sprite.png';
+$search-btn: (0px, 25px, 0px, -25px, 25px, 25px, 70px, 70px, '../images/sprite.png', 'search-btn', );
+$signup-btn-name: 'signup-btn';
+$signup-btn-x: 25px;
+$signup-btn-y: 25px;
+$signup-btn-offset-x: -25px;
+$signup-btn-offset-y: -25px;
+$signup-btn-width: 25px;
+$signup-btn-height: 25px;
+$signup-btn-total-width: 70px;
+$signup-btn-total-height: 70px;
+$signup-btn-image: '../images/sprite.png';
+$signup-btn: (25px, 25px, -25px, -25px, 25px, 25px, 70px, 70px, '../images/sprite.png', 'signup-btn', );
+$spritesheet-width: 70px;
+$spritesheet-height: 70px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($comments-btn, $comments-on-btn, $divide-btn, $favorite-btn, $favorite-on-btn, $login-btn, $search-btn, $signup-btn, );
+$spritesheet: (70px, 70px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

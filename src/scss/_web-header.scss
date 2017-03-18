@@ -1,0 +1,95 @@
+$padding-vertical: $default-padding;
+$padding-horizontal: $default-padding;
+$icon-height: 25px;
+$logo-height: 30px;
+$header-height: 45px;
+$header-factor-growth: 1.55;
+
+@mixin top-gap-header {
+    margin-top: #{2 * $header-height}; //para salvar el gap del menú y el header
+
+    @include if-is-large-screen {
+        margin-top: #{$header-height * $header-factor-growth};
+    }
+}
+
+.web-header {
+    position: fixed;
+    display: block;
+    z-index: 998;
+    top: 0; 
+    left: 0;
+    background-color: darken($default-background-color, 5%);
+    border-bottom: 1px solid $light-gray;
+    height: $header-height;
+    width: 100%;
+    @include if-is-large-screen {
+        top: 0 !important; //No es redundante. Obliga a ponerlo a 0 por encima de las modificaciones de jquery al cambiar la orientación de una tablet
+        height: #{$header-height * $header-factor-growth} !important;
+    }
+
+
+    .logo {
+        height: $logo-height;
+        position: absolute;
+        top: #{$padding-vertical/2};
+        left: $padding-horizontal;
+
+        @include if-is-large-screen {
+            height: #{$logo-height * 2};
+        }
+    }
+
+    .buttons-grp {
+        padding: $padding-vertical $padding-horizontal;
+        position: absolute;
+        right: #{-($width-input + $default-margin + $padding-horizontal)};
+        transition: right 0.3s ease-in-out;
+
+        &.active {
+            right: 0px;
+            .signin, .signup, .separator {
+                display: none;
+                 
+            }
+        }
+
+        .signin, .signup, .separator, .search-grp, .search {
+            height: $icon-height;
+            display: inline-block;
+        }
+
+        .signin {
+            vertical-align: bottom; //Investigar más a fondo. Necesario para que se vea bien en firefox
+            @extend .login-btn;
+        }
+
+        .signup {
+            vertical-align: bottom;  //Investigar más a fondo. Necesario para que se vea bien en firefox
+            @extend .signup-btn;
+        }
+
+        .separator {
+            @extend .divide-btn;
+        }
+
+
+        .search-grp {
+            margin: auto 0 auto 20px;
+            .search {
+                @extend .search-btn;
+                height: $icon-height;
+            }
+            
+            .input-search {
+                margin-left:$default-margin;
+                border: 0px solid transparent;
+                border-radius: 0px;
+                border-bottom: 1px solid $color-gray;
+                background-color: inherit;
+            }
+        }
+
+    }
+    
+}
